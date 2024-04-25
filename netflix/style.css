@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color: white;
+    --backgroundColor: black;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    width: 100%;
+    min-height: 100%;
+    color: var(--color);
+    font-family: sans-serif;
+}
+
+.page-1 {
+    width: 100%;
+    height:100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.934) 0, rgba(0, 0, 0, 0.112) 60%, rgb(0, 0, 0) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    object-position: center;
+    transform: matrix(1.25, 0, 0, 1.25, 0, -87.5);
+}
+
+nav {
+    width: 80%;
+    min-height: 50px;
+    margin: auto;
+    padding: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    fill: red;
+    width: 150px;
+}
+
+.sgn-in {
+    background-color: red;
+    padding: 5px 15px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color);
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.sgn-in:hover {
+    background-color: rgb(198, 4, 4);
+}
+
+.page1-content {
+    width: 80%;
+    height: calc(100% - 87px);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-size-adjust: 100%;
+    padding: 10px;
+}
+
+.content-heading-1 {
+    font-size: 2.9rem;
+    font-weight: bolder;
+}
+
+.content-heading-2,
+h1 {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width:767px) {
+    .content-heading-2 , h1 {
+        font-size: 1rem;
+    }
+    .content-heading-1 {
+        font-size: 2rem;
+    }
+    nav {
+        width: 100%;
+    }
+}
+
+.input-can {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input {
+    border: 2px solid rgb(150, 150, 150);
+    width: 400px;
+    height: 70px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--font-size, 20px);
+    /* Using CSS variable for dynamic font size */
+    border-radius: 5px;
+    color:rgb(150, 150, 150);
+}
+.eml-input {
+    height: var(--input-height, 0);
+    /* Using CSS variable for dynamic input height */
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    transition: height 0.3s ease;
+    /* Add transition for smooth height change */
+}
+
+.input-can:focus-within .input {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+.input-can:focus-within .input {
+    /* Set font size to 15px when .input-can is focused */
+    --font-size: 15px;
+    color: rgb(208, 208, 208);
+}
+
+.input-can:focus-within .eml-input {
+    --input-height: 30px;
+    /* Set input height to 30px when .input-can is focused */
+}
+
+.input-a {
+    background-color: red;
+    width: 200px;
+    height: 90%;
+    margin: 0 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: capitalize;
+    word-spacing: -3px;
+    color: white;
+}
+
+.input-a:hover {
+    background-color: rgb(198, 4, 4);
+}
+@media screen and (max-width:767px) {
+    .page-1 {
+        height: 70vh;
+    }
+    .input-can {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.border {
+    border: 0 solid black;
+    border-top: 10px solid #232323;
+}
+.page-2 {
+    width: 100%;
+    padding: 50px 0;
+}
+.page-2 > div {
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+
+}
+.page2-part {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    flex-direction: column;
+}
+.part-h1 {
+    font-size: 4rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 50px;
+}
+.part2 {
+    position: relative;
+}
+.tv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+.tv-frame {
+    width: 90%;
+    height: 50%;
+    border: 5px solid #232323;
+    border-radius: 5px;
+}
+.stand1 {
+    width: 20%;
+    height: 10px;
+    background-color: #232323;
+}
+.stand2 {
+    width: 40%;
+    height: 20px;
+    background-color: #232323;
+    transform: perspective(250px) rotateX(40deg);
+}
+.desk {
+    width: 90%;
+    height: 50px;
+    background-color: #232323;
+    padding: 5px;
+    display: flex;
+}
+.draw {
+    width: 50%;
+    height: 100%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.draw:last-child {
+    justify-content: start;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    margin: 10px;
+}
+.gif {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width:767px) {
+    .page-2 > div {
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(2 , 1fr);
+        height: fit-content;
+    }
+    .page2-part {
+        height: fit-content;
+    }
+    .input {
+        width: 300px;
+    }
+    .input-a {
+        width: 150px;
+        font-size: 20px;
+    }
+}
+.mobile {
+    width: 50%;
+    height:500px;
+    border: 5px solid #232323;
+    border-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+.part2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #232323;
+}
+.cam {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: black;
+}
+.speaker {
+    width: 80px;
+    height: 10px;
+    background-color: black;
+    border-radius: 20px;
+}
+.mobile-screen {
+    width: 100%;
+    height: calc(500px - 55px);
+    opacity: 0.5;
+}
+.title {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows:repeat(2 , 1fr);
+    background-color:#232323;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    gap: 0 10px;
+    border-radius: 10px;
+}
+.poster {
+    width: 100%;
+    grid-row: 1/3;
+}
+.name {
+    text-transform: capitalize;
+    padding:0 ;
+    font-size: 25px;
+}
+.download {
+    font-size: 20px;
+    color: blue;
+    line-height: 10px;
+}
+@media screen and (max-width:767px) {
+    
+    .grid3 {
+        grid-row: 2/3;
+        height: fit-content;
+    }
+    .grid4 {
+        height: 50vh;
+    }
+    .page-3 {
+        padding: 100px 0;
+        display: grid;
+        place-content: center;
+    }
+    .page-3 > div {
+        height: 100vh;
+        grid-template-columns: auto 1fr;
+    }
+}
+.page4 {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+.content-page4 {
+    width: 80%;
+    margin: auto;
+}
+.action {
+    width: 100%;
+    height: 80%;
+}
+.action {
+    width: 100%;
+    height: 100%;
+}
+.page5 {
+    width: 100%;
+    padding: 50px 0;
+}
+.page5-h1 {
+    width: 80%;
+    padding: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.page5-div {
+    width: 80%;
+    margin: auto;
+}
+.q-can {
+    width: 100%;
+    background-color: #232323;
+    cursor: pointer;
+}
+.front {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.q {
+    padding: 20px;
+    font-size: 2rem;
+}
+.back {
+    width: 100%;
+    background-color: #131313;
+    padding: 10px 5px;
+    display: none;
+}
+@media screen and (max-width:767px) {
+    .q {
+        font-size:1rem ;
+    }
+}
+.ending {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ask-eml {
+    margin: 50px 0;
+}
+.input-a1 {
+    padding: 15px 10px;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.input-a1:hover {
+    background-color: rgb(195, 3, 3);
+}
+@media screen and (max-width:767px) {
+    .input-a1 {
+        font-size: 20px;
+    }
+}
+footer {
+    padding: 50px 0;
+}
+.links {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    gap: 20px;
+}
+.link:first-child {
+    grid-column: 1 / 5; /* Spans from column 1 to column 5 */
+}
+.link {
+    color: #9b9a9a;
+}
+.the-end {
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    color: #9b9a9a;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+main {
+    display: none;
+}
+.starting {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-image: url(Netflix\ motion\ logo.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+@media screen and  (min-width:767px)  and (max-width:1023px) {
+    
+}
